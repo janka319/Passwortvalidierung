@@ -9,4 +9,15 @@ public class PasswordValidator {
         }
         return false;
     }
+
+    public static boolean containsDigit(String password) {
+        char c;
+        for (int i=0;i<password.length();i++){
+            c = password.charAt(i);
+            if (Character.isDigit(c)){
+                return true;
+            }
+        }
+        return false;
+    }
 }

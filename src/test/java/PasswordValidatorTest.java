@@ -33,5 +33,33 @@ class PasswordValidatorTest {
         assertFalse(actual);
     }
 
+    @Test
+    @DisplayName("Check if password contains number")
+
+    public void checkIfContainsNumber(){
+        // Given
+        String password = "a2b";
+
+        // When
+        boolean actual = PasswordValidator.containsDigit(password);
+
+        // Then
+        assertTrue(actual);
+    }
+
+    @Test
+    @DisplayName("Check if password contains no number")
+
+    public void checkIfContainsNoNumber(){
+        // Given
+        String password = "abc";
+
+        // When
+        boolean actual = PasswordValidator.containsDigit(password);
+
+        // Then
+        assertFalse(actual);
+    }
+
 
 }
