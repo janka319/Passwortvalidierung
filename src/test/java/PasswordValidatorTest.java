@@ -34,9 +34,23 @@ class PasswordValidatorTest {
     }
 
     @Test
+    @DisplayName("")
+
+    public void checkNull() {
+        // Given
+        String password = null;
+
+        // When
+        boolean actual = PasswordValidator.hasLength(password);
+
+        // Then
+        assertFalse(actual);
+    }
+
+    @Test
     @DisplayName("Check if password contains number")
 
-    public void checkIfContainsNumber(){
+    public void checkIfContainsNumber() {
         // Given
         String password = "a2b";
 
@@ -50,7 +64,7 @@ class PasswordValidatorTest {
     @Test
     @DisplayName("Check if password contains no number")
 
-    public void checkIfContainsNoNumber(){
+    public void checkIfContainsNoNumber() {
         // Given
         String password = "abc";
 
@@ -60,9 +74,10 @@ class PasswordValidatorTest {
         // Then
         assertFalse(actual);
     }
+
     @Test
     @DisplayName("Checking if password contains Lowercase")
-    public void checkIfContainsLowerCase(){
+    public void checkIfContainsLowerCase() {
         // Given
         String password = "ASDASDASasdasd";
 
@@ -72,9 +87,10 @@ class PasswordValidatorTest {
         // Then
         assertTrue(actual);
     }
+
     @Test
     @DisplayName("Checking if password contains Uppercase")
-    public void checkIfContainsUpperCase(){
+    public void checkIfContainsUpperCase() {
         // Given
         String password = "asdasdasdadsaASDASD";
 
