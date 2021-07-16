@@ -60,6 +60,30 @@ class PasswordValidatorTest {
         // Then
         assertFalse(actual);
     }
+    @Test
+    @DisplayName("Checking if password contains Lowercase")
+    public void checkIfContainsLowerCase(){
+        // Given
+        String password = "ASDASDASasdasd";
+
+        // When
+        boolean actual = PasswordValidator.containsLowerCase(password);
+
+        // Then
+        assertTrue(actual);
+    }
+    @Test
+    @DisplayName("Checking if password contains Uppercase")
+    public void checkIfContainsUpperCase(){
+        // Given
+        String password = "asdasdasdadsaASDASD";
+
+        // When
+        boolean actual = PasswordValidator.containsUpperCase(password);
+
+        // Then
+        assertTrue(actual);
+    }
 
 
 }
